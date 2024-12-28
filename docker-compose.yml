@@ -1,0 +1,13 @@
+version: '3.8' # Specifies the version of Docker Compose being used.
+
+services: # Defines the services (containers) to run in this configuration.
+  zephyr: # Name of the service.
+    build: . # Instructs Docker Compose to build the image from the current directory.
+    env_file: # Specifies a file containing environment variables for the container.
+      - .env # The environment file to use.
+    container_name: zephyr-hello-world # Sets the name of the container explicitly.
+    volumes: # Defines volumes for sharing files between the host and the container.
+      - .:/workspace # Maps the current directory on the host to /workspace inside the container.
+    working_dir: /workspace # Sets the working directory inside the container.
+    stdin_open: true # Keeps standard input open for the container (useful for interactive processes).
+    tty: true # Allocates a pseudo-TTY for the container (enables an interactive terminal).
