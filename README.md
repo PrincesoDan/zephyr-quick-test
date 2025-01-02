@@ -35,3 +35,5 @@ cd zephyr-hello-world
 ```sh
 mercury-cli --jwt $MERCURY_JWT_TESTNET --local false --mainnet false deploy --force true 2>&1 | tee log-deploy.txt
 ```
+
+Hecho con amor desde stgo chile
